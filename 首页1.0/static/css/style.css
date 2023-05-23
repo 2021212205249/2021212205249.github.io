@@ -1,0 +1,191 @@
+ul > li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+ul {
+    display: flex;
+}
+
+.name {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: white;
+    position: fixed;
+    top: 0;
+}
+
+.main {
+    margin: 100px 0 0 0;
+}
+
+body {
+    margin: 0;
+}
+
+.m-map {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+
+.main {
+    width: 100%;
+    height: 750px;
+}
+.shandongimg {
+    margin-top: -350px;
+}
+.introduction {
+  margin-top: 110px;
+}
+.\38 {
+    position: absolute;
+    margin-left: 582px;
+    font-size: 34px;
+    color: salmon;
+    font-weight: bold;
+}
+.shandong-text {
+    width: 1000px;
+    margin-left: 411px;
+    margin-top: -198px;
+}
+.shandong-text1 {
+    margin-left: 338px;
+    position: absolute;
+    width: 5px;
+    margin-top: -71px;
+    font-size: 25px;
+}
+.sichuanimg {
+    float: right;
+    margin-right: -50px;
+}
+.sichuan-text {
+    margin-top: 114px;
+    position: absolute;
+    width: 987px;
+    margin-left: 113px;
+}
+.sichuan-text1 {
+    float: right;
+    margin-top: 135px;
+    width: 5px;
+    margin-right: -69px;
+    font-size: 25px;
+}
+.hunan-total {
+    margin-top: 229px;
+}
+.hunan-text {
+    width: 1010px;
+    margin-top: -177px;
+    margin-left: 413px;
+}
+.hunan-text1 {
+    margin-left: 350px;
+    font-size: 25px;
+    width: 5px;
+    margin-top: -64px;
+}
+.guangdongimg {
+    float: right;
+    margin-right: -314px;
+    margin-top: -80px;
+}
+.guangdong-text {
+    margin-top: 160px;
+    position: absolute;
+    width: 975px;
+    margin-left: 109px;
+}
+.guangdong-text1 {
+    float: right;
+    margin-top: 154px;
+    width: 5px;
+    margin-right: -313px;
+    font-size: 25px;
+}
+.jiangsuimg {
+    margin-top: 178px;
+    margin-left: -86px;
+}
+.jiangsu-text {
+    width: 1039px;
+    margin-top: -255px;
+    margin-left: 400px;
+    position: absolute;
+}
+.jiangsu-text1 {
+    margin-top: -249px;
+    font-size: 25px;
+    width: 5px;
+    margin-left: 350px;
+}
+.fujianimg {
+    float: right;
+    margin-right: -101px;
+}
+.fujianimg {
+    float: right;
+    margin-right: -730px;
+}
+.fujian-text {
+    margin-top: 108px;
+    width: 1000px;
+    margin-left: 91px;
+    position: absolute;
+}
+.fujian-text1 {
+    font-size: 25px;
+    width: 5px;
+    margin-left: 1124px;
+    float: right;
+    position: absolute;
+    margin-top: 95px;
+}
+.zhejiangimg {
+    margin-left: -222px;
+    margin-top: 122px;
+}
+.zhejiang-text {
+    margin-left: 432px;
+    width: 1000px;
+    margin-top: -270px;
+}
+.zhejiang-text1 {
+    width: 5px;
+    font-size: 25px;
+    margin-left: 358px;
+    margin-top: -67px;
+}
+button#back {
+    display: none;
+}
+.anhuiimg {
+    float: right;
+    margin-right: -315px;
+    margin-top: -170px;
+}
+.anhui-text {
+    width: 1000px;
+    margin-top: 110px;
+    position: absolute;
+    margin-left: 102px;
+}
+.anhui-text1 {
+    width: 5px;
+    font-size: 25px;
+    float: right;
+    margin-right: -329px;
+    margin-top: 113px;
+}
