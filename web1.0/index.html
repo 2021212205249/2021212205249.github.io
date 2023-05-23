@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<title>馋哭你美食网</title>
+
+<style>
+#china-map {
+  width: 1000px;
+  height: 1000px;
+  margin: auto;
+}
+#box{
+  display:none;
+  background-color: goldenrod;
+  width: 180px;
+  height: 30px;
+}
+#box-title{
+  display:block;
+}
+#back {
+  display:none;
+}
+</style>
+
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/echarts.min.js"></script>
+<script type="text/javascript" src="static/js/china.js"></script>
+
+</head>
+<body>
+<header>
+<div class="box">
+  <div class="navbar">
+    <h1 class="logo">馋哭你<span>美食网</span></h1>
+    <ul>
+      <li><a href="#" onclick="window.location.href='https://react-aybgid.stackblitz.io'">首页</a></li>
+      <li><a href="#">菜系</a><i class="fas fa-caret-down"></i>
+        <div class="dropdown-menu">
+          <ul>
+            <li><a href="#" onclick="window.location.href='https://react-hj6t6a.stackblitz.io'">鲁菜</a></li>
+            <li><a href="#" onclick="window.location.href='https://react-de41ol.stackblitz.io'">川菜</a></li>
+            <li><a href="#" onclick="window.location.href='https://react-4jexcf.stackblitz.io'">湘菜</a></li>
+            <li><a href="#" onclick="window.location.href='https://react-d2kdkv.stackblitz.io'">粤菜</a></li>
+            <li><a href="#" onclick="window.location.href='https://react-5tdzld.stackblitz.io'">江苏菜</a></li>
+            <li><a href="#" onclick="window.location.href='https://react-y6vojh.stackblitz.io'">闽菜</a></li>
+            <li><a href="#" onclick="window.location.href='https://react-mqlc4a.stackblitz.io'">浙江菜</a></li>
+            <li><a href="#" onclick="window.location.href='https://react-47chmp.stackblitz.io'">徽菜</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</header>
+<section class="chinamap">
+  <div style="text-align:center;clear:both;"></div>
+  <button id="back">返回全国</button>
+  <div id="china-map"></div>
+  <script>
+      var myChart = echarts.init(document.getElementById('china-map'));
+      var oBack = document.getElementById("back");
+
+      var provinces = ['shanghai', 'hebei', 'shanxi', 'neimenggu', 'liaoning', 'jilin', 'heilongjiang', 'jiangsu', 'zhejiang', 'anhui', 'fujian', 'jiangxi', 'shandong', 'henan', 'hubei', 'hunan', 'guangdong', 'guangxi', 'hainan', 'sichuan', 'guizhou', 'yunnan', 'xizang', 'shanxi1', 'gansu', 'qinghai', 'ningxia', 'xinjiang', 'beijing', 'tianjin', 'chongqing', 'xianggang', 'aomen'];
+
+      var provincesText = ['上海', '河北', '山西', '内蒙古', '辽宁', '吉林', '黑龙江', '江苏', '浙江', '安徽', '福建', '江西', '山东', '河南', '湖北', '湖南', '广东', '广西', '海南', '四川', '贵州', '云南', '西藏', '陕西', '甘肃', '青海', '宁夏', '新疆', '北京', '天津', '重庆', '香港', '澳门'];
+
+      var seriesData = [{
+        name: '北京',
+        value: 100
+      }, {
+        name: '天津',
+        value: 0
+      }, {
+        name: '上海',
+        value: 60
+      }, {
+        name: '重庆',
+        value: 0
+      }, {
+        name: '河北',
+        value: 60
+      }, {
+        name: '河南',
+        value: 60
+      }, {
+        name: '云南',
+        value: 0
+      }, {
+        name: '辽宁',
+        value: 0
+      }, {
+        name: '黑龙江',
+        value: 0
+      }, {
+        name: '湖南',
+        value: 60
+      }, {
+        name: '安徽',
+        value: 0
+      }, {
+        name: '山东',
+        value: 60
+      }, {
+        name: '新疆',
+        value: 0
+      }, {
+        name: '江苏',
+        value: 0
+      }, {
+        name: '浙江',
+        value: 0
+      }, {
+        name: '江西',
+        value: 0
+      }, {
+        name: '湖北',
+        value: 60
+      }, {
+        name: '广西',
+        value: 60
+      }, {
+        name: '甘肃',
+        value: 0
+      }, {
+        name: '山西',
+        value: 60
+      }, {
+        name: '内蒙古',
+        value: 0
+      }, {
+        name: '陕西',
+        value: 0
+      }, {
+        name: '吉林',
+        value: 0
+      }, {
+        name: '福建',
+        value: 0
+      }, {
+        name: '贵州',
+        value: 0
+      }, {
+        name: '广东',
+        value: 597
+      }, {
+        name: '青海',
+        value: 0
+      }, {
+        name: '西藏',
+        value: 0
+      }, {
+        name: '四川',
+        value: 60
+      }, {
+        name: '宁夏',
+        value: 0
+      }, {
+        name: '海南',
+        value: 60
+      }, {
+        name: '台湾',
+        value: 0
+      }, {
+        name: '香港',
+        value: 0
+      }, {
+        name: '澳门',
+        value: 0
+      }];
+
+      oBack.onclick = function () {
+        initEcharts("china", "中国");
+      };
+
+      initEcharts("china", "中国");
+
+      // 初始化echarts
+      function initEcharts(pName, Chinese_) {
+        var tmpSeriesData = pName === "china" ? seriesData : [];
+
+        var option = {
+          title: {
+            text: Chinese_ || pName,
+            left: 'center'
+          },
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b}<br/>{c} (p / km2)'
+            },
+          series: [
+            {
+              name: Chinese_ || pName,
+              type: 'map',
+              mapType: pName,
+              roam: false,//是否开启鼠标缩放和平移漫游
+              data: tmpSeriesData,
+              top: "3%",//组件距离容器的距离
+                zoom:1.1,
+                selectedMode : 'single',
+
+                label: {
+                    normal: {
+                        show: true,//显示省份标签
+                        textStyle:{color:"#fbfdfe"}//省份标签字体颜色
+                    },
+                    emphasis: {//对应的鼠标悬浮效果
+                        show: true,
+                        textStyle:{color:"#323232"}
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        borderWidth: .5,//区域边框宽度
+                        borderColor: '#0550c3',//区域边框颜色
+                        areaColor:"#4ea397",//区域颜色
+
+                    },
+
+                    emphasis: {
+                        borderWidth: .5,
+                        borderColor: '#4b0082',
+                        areaColor:"#ece39e",
+                    }
+                },
+            }
+          ]
+
+             };
+
+        myChart.setOption(option);
+
+        myChart.off("click");
+
+        if (pName === "china") { // 全国时，添加click 进入省级
+          myChart.on('click', function (param) {
+            console.log(param.name);
+            // 遍历取到provincesText 中的下标  去拿到对应的省js
+            for (var i = 0; i < provincesText.length; i++) {
+              if (param.name === provincesText[i]) {
+                //显示对应省份的方法
+                showProvince(provinces[i], provincesText[i]);
+                break;
+              }
+            }
+              if (param.componentType === 'series') {
+                  var provinceName =param.name;
+                  $('#box').css('display','block');
+                  $("#box-title").html(provinceName);
+
+              }
+          });
+        } else { // 省份，添加双击 回退到全国
+          myChart.on("dblclick", function () {
+            initEcharts("china", "中国");
+          });
+        }
+      }
+  </script>
+</section>
+<section class="introduction">
+    <div class="8">八大菜系特色简介</div>
+    <div class="shandong-total">
+    <div class="shandongimg">
+        <img src="static/media/shandong.png" style="transform: scale(0.5);">
+    </div>
+    <div class="shandong-text">
+        起源于山东的齐鲁风味，是中国传统四大菜系（也是八大菜系）中唯一的自发型菜系（相对于淮扬、川、粤等影响型菜系而言），是历史最悠久、技法最丰富、难度最高、最见功力的菜系之一。宋代以后鲁菜就成为“北食”的代表。明、清两代，鲁菜已成宫廷御膳主体，对京、津和东北各地的影响较大。是八大菜系之首。一般认为鲁菜内部分为两大派系，分别以济南和胶东两地的地方菜演化而成。有时也分为四大派系，为以上两种加上孔府菜和药膳系（食疗养生），都蜚声海内外。
+    </div>
+    <div class="shandong-text1">山东</div>
+    </div>
+    <div class="sichuan-total">
+        <div class="sichuanimg">
+            <img src="static/media/sichuan.png" style="transform: scale(0.5);">
+        </div>
+        <div class="sichuan-text">
+            川菜的风格朴实而又清新,具有浓厚的乡土气息。原料多选山珍、江鲜、野蔬和畜禽。善用小炒、干煸、干烧和泡、烩等烹调法。以“味”闻名,味型较多,富于变化,以鱼香、红油、怪味、麻辣较为突出。川菜是中国最有特色的菜系,也是民间最大菜系。川菜素来享有“一菜一格,百菜百味”的声誉。川菜在烹调方法上,有炒、煎、干烧、炸、熏、泡、炖、焖、烩、贴、爆等38种之多。在口味上特别讲究色、香、味、形,兼有南北之长，以味的多、广、厚著称。历来有“七味川菜是中国汉族传统的四大菜系之一、中国八大菜系之一。
+        </div>
+        <div class="sichuan-text1">四川</div>
+    </div>
+    <div class="hunan-total">
+    <div class="hunanimg">
+        <img src="static/media/hunan.jpg" style="transform: scale(0.5);">
+    </div>
+    <div class="hunan-text">
+        湘菜特别讲究调味，尤重酸辣、咸香、清香、浓鲜。夏天炎热，其味重清淡、香鲜。冬天湿冷，味重热辣、浓鲜。湘菜调味，特色是“酸辣”，以辣为主，酸寓其中。“酸”是酸泡菜之酸，比醋更为醇厚柔和。湖南大部分地区地势较低，气候温暖潮湿，古称“卑湿之地”。而辣椒有提热、开胃、祛湿、祛风之效，故深为湖南人民所喜爱。剁椒经过乳酸发酵，具有开胃、养胃的作用。
+    </div>
+    <div class="hunan-text1">湖南</div>
+    </div>
+    <div class="guangdong-total">
+        <div class="guangdongimg">
+            <img src="static/media/guangdong.png" style="transform: scale(0.25);">
+        </div>
+        <div class="guangdong-text">
+            广东菜，是中国四大菜系、八大菜系之一。狭义上的粤菜指广府菜（即广州府菜），广义上又包含潮州菜（潮汕菜）、东江菜（也称客家菜）。粤菜源自中原，传承了孔子所倡导的“食不厌精，脍不厌细”的中原饮食风格，因此粤菜做法比较复杂、精细，如广府菜中的煲仔饭、烤乳猪源自周代“八珍”美食；烧鹅源自宋朝名菜烤鸭；点心从中原传到广东后演变出虾饺、干蒸烧卖等广式点心。广府菜范围包括珠江三角洲和韶关等地，广府菜是粤菜的代表，自古有“食在广州，厨出凤城(顺德)”、“食在广州，味在西关”的美誉。
+        </div>
+        <div class="guangdong-text1">广东</div>
+        </div>
+        <div class="jiangsu-total">
+            <div class="jiangsuimg">
+                <img src="static/media/jiangsu.png" style="transform: scale(0.4);">
+            </div>
+            <div class="jiangsu-text">
+                简称苏菜。由于苏菜和浙菜相近，因此和浙菜统称江浙菜系。江苏菜起源于二千多年前，其中金陵菜起源于先秦时期，当时吴人善制炙鱼、蒸鱼和鱼片。南宋时，苏菜和浙菜同为“南食”的两大台柱。苏菜擅长炖、焖、蒸、炒，重视调汤，保持菜的原汁，风味清鲜，浓而不腻，淡而不薄，酥松脱骨而不失其形，滑嫩爽脆而不失其味。
+                金陵菜口味和醇，玲珑细巧；徐州菜色调浓重，习尚五辛；扬州菜清淡适口，刀工精细；苏州菜口味趋甜，清雅多姿。
+            </div>
+            <div class="jiangsu-text1">江苏</div>
+            </div>
+        <div class="fujian-total">
+            <div class="fujianimg">
+                <img src="static/media/fujian.png" style="transform: scale(0.5);">
+            </div>
+        <div class="fujian-text">
+            发源于福州，以福州菜为基础，后又融合闽东、闽南、闽西、闽北、莆仙五地风味菜形成的菜系。狭义闽菜指以福州菜，最早起源于福建福州闽县，后来发展成福州、闽南、闽西三种流派,即广义闽菜。闽菜以口味清鲜、和醇、荤香、多汤为主，擅红糟、糖醋调味.故此闽菜形成三大特色，一长于红糟调味，二长于制汤，三长于使用糖醋。
+        </div>
+        <div class="fujian-text1">福建</div>
+        </div>
+        <div class="zhejiang-total">
+            <div class="zhejiangimg">
+                <img src="static/media/zhejiang.png" style="transform: scale(0.28);">
+            </div>
+        <div class="zhejiang-text">
+            简称浙菜，其地山清水秀，物产丰富，故谚曰：“上有天堂，下有苏杭”。浙菜富有江南特色，历史悠久，源远流长，是中国著名的地方菜种。浙菜起源于新石器时代的河姆渡文化，经越国先民的开拓积累，汉唐时期的成熟定型，宋元时期的繁荣和明清时期的发展，浙江菜的基本风格已经形成，
+        </div>
+        <div class="zhejiang-text1">浙江</div>
+        </div>
+        <div class="anhui-total">
+            <div class="anhuiimg">
+                <img src="static/media/anhui.png" style="transform: scale(0.26);">
+            </div>
+        <div class="anhui-text">
+            安徽菜，是以皖南菜为代表的皖南菜、皖江菜、合肥菜、淮南菜、皖北菜的总称。其中皖南风味以徽州地方菜肴为代表，它是徽菜的主流和渊源。徽菜以徽州特产为主要原料，在采用民间传统烹调技法的基础上，吸收其它菜系技艺之长而烹制的以咸鲜味为主的地方菜肴。徽菜具有丰厚的文化底蕴，是全国著名的八大菜系之一。
+        </div>
+        <div class="anhui-text1">安徽</div>
+        </div>
+</section>
+
+</body>
+</html>
