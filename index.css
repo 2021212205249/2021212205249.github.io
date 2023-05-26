@@ -6,7 +6,12 @@ body {
   position: absolute;
   left: 10%;
 }
-
+header {
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index: 2;
+}
 .box {
   flex-wrap: wrap;
   display: inline-flex;
